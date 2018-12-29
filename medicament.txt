@@ -1,0 +1,99 @@
+DOLIPRANE Antalgiques
+EFFERALGAN Antalgiques
+DAFALGAN Antalgiques
+LEVOTHYROX Endocrinologie
+IMODIUM Gastro-Entéro-Hépatologie
+KARDEGIC Hémostase et sang
+SPASFON Antalgiques
+ISIMIG Neurologie-psychiatrie
+TAHOR Cardiologie et angéiologie
+SPEDIFEN Antalgiques
+VOLTARENE Anti-inflammatoires
+ELUDRIL Oto-rhino-laryngologie
+IXPRIM Antalgiques
+PARACETAMOL Antalgiques
+FORLAX Gastro-Entéro-Hépatologie
+MAGNE Métabolisme et nutrition
+HELICIDINE Pneumologie
+CLAMOXYL Infectiologie - Parasitologie
+PIASCLEDINE Rhumatologie
+LAMALINE Antalgiques
+GAVISCON Gastro-Entéro-Hépatologie
+DAFLON Cardiologie et angéiologie
+ANTARENE Rhumatologie
+RHINOFLUIMUCIL Oto-rhino-laryngologie
+PLAVIX Hémostase et sang
+MOPRAL Gastro-Entéro-Hépatologie
+SUBUTEX Neurologie-psychiatrie
+AERIUS Allergologie
+ORELOX Infectiologie - Parasitologie
+INEXIUM Gastro-Entéro-Hépatologie
+METEOSPASMYL Gastro-Entéro-Hépatologie
+AUGMENTIN Infectiologie - Parasitologie
+TOPLEXIL Allergologie
+PIVALONE Oto-rhino-laryngologie
+VASTAREL Cardiologie et angéiologie
+ADVIL Antalgiques
+EUPANTOL Gastro-Entéro-Hépatologie
+DEXERYL Dermatologie
+RENUTRYL Métabolisme et nutrition
+XANAX Neurologie-psychiatrie
+EMLAPATCH Anesthésie, réanimation
+LASILIX Cardiologie et angéiologie
+ENDOTELON Cardiologie et angéiologie
+DEROXAT Neurologie-psychiatrie
+TEMESTA Neurologie-psychiatrie
+EFFEXOR Neurologie-psychiatrie
+PARACETAMOL Antalgiques
+VENTOLINE Pneumologie
+SOLUPRED Anti-inflammatoires
+DEXTROPROPOXYPHENE Antalgiques
+PNEUMOREL Pneumologie
+INIPOMP Gastro-Entéro-Hépatologie
+PREVISCAN Hémostase et sang
+ASPEGIC Antalgiques
+GINKOR Cardiologie et angéiologie
+CRESTOR Cardiologie et angéiologie
+MEDIATOR Métabolisme et nutrition
+SERESTA Neurologie-psychiatrie
+MOTILIUM Gastro-Entéro-Hépatologie
+PARACETAMOL Antalgiques
+CELESTENE Anti-inflammatoires
+AMLOR Cardiologie et angéiologie
+DIAMICRON Métabolisme et nutrition
+TANAKAN Cardiologie et angéiologie
+ATARAX Allergologie
+DERINOX Oto-rhino-laryngologie
+XYZALL Allergologie
+DEXTROPROPOXYPHENE Antalgiques
+SERETIDE Pneumologie
+COVERSYL Cardiologie et angéiologie
+PROPOFAN Antalgiques
+HEXAQUINE Rhumatologie
+DIFFU-K Métabolisme et nutrition
+APROVEL Cardiologie et angéiologie
+PARIET Gastro-Entéro-Hépatologie
+ZALDIAR Antalgiques
+DIPROSONE Dermatologie
+PARACETAMOL Antalgiques
+BETADINE Stomatologie
+LYSANXIA Neurologie-psychiatrie
+ALODONT Stomatologie
+LEXOMIL Neurologie-psychiatrie
+DACRYOSERUM Ophtalmologie
+FUCIDINE Dermatologie
+STILNOX Neurologie-psychiatrie
+KETUM Rhumatologie
+STABLON Neurologie-psychiatrie
+ART Rhumatologie
+BIOCALYPTOL Pneumologie
+THIOVALONE Oto-rhino-laryngologie
+DEBRIDAT Gastro-Entéro-Hépatologie
+PYOSTACINE Infectiologie - Parasitologie
+TIORFAN Gastro-Entéro-Hépatologie
+SPECIAFOLDINE Cancérologie et hématologie
+OGAST Gastro-Entéro-Hépatologie
+RIVOTRIL Neurologie-psychiatrie
+TOPALGIC Antalgiques
+NASONEX Oto-rhino-laryngologie
+COAPROVEL Cardiologie et angéiologie
