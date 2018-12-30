@@ -20,6 +20,14 @@ class CreateConfigurationsTable extends Migration
             $table->string('label');
             $table->timestamps();
         });
+
+        Schema::table('medecins', function (Blueprint $table) {
+            $table->integer('diplome')->unsigned()->index();
+        });
+
+        Schema::table('medecins', function (Blueprint $table) {
+            $table->integer('specialite')->unsigned()->index();
+        });
     }
 
     /**

@@ -27,3 +27,14 @@ Route::put('configuration/{id}','ConfigurationController@store')
     ->name('store');
 Route::delete('configuration/{id}','ConfigurationController@destroy')
     ->name('destroy');
+
+Route::get('medecins','MedecinController@index')
+    ->name('index');
+Route::get('medecin/{id}','MedecinController@show')
+    ->name('show');
+Route::post('medecin','MedecinController@store')
+    ->name('store');
+Route::put('medecin/{id}','MedecinController@store')
+    ->name('store');
+Route::delete('medecin/{id}','MedecinController@destroy')
+    ->name('destroy');

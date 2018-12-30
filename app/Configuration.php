@@ -18,4 +18,12 @@ class Configuration extends Model
             }
         });
     }
+
+    public function diplomes(){
+        return $this->hasMany('App\Medecin');
+    }
+
+    public function specialites(){
+        return $this->hasMany('App\Medecin');
+    }
 }

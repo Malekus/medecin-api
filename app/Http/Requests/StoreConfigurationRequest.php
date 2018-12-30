@@ -23,7 +23,7 @@ class StoreConfigurationRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return true;<
     }
 
     /**
@@ -36,7 +36,7 @@ class StoreConfigurationRequest extends FormRequest
         return [
             'categorie' => 'required|max:20|alpha',
             'type' => 'required|max:20',
-            'label' => 'required|max:20'
+            'label' => 'required|max:20',
         ];
     }
 
