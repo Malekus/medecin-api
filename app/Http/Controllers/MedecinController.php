@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Configuration;
 use App\Http\Requests\StoreMedecinRequest;
-use App\Medecin;
-use Illuminate\Http\Request;
 use App\Http\Resources\Medecin as MedecinResource;
+use App\Medecin;
 
 class MedecinController extends Controller
 {
@@ -19,14 +17,13 @@ class MedecinController extends Controller
 
     public function show($id)
     {
-
-        $medecin = Medecin::findOrfail($id);
+        $medecin = Medecin::findOrFail($id);
         return new MedecinResource($medecin);
     }
 
     public function destroy($id)
     {
-        $medecin = Medecin::findOrfail($id);
+        $medecin = Medecin::findOrFail($id);
 
         if ($medecin->delete()) {
             return new MedecinResource($medecin);

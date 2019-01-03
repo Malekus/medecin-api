@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateConfigurationsTable extends Migration
+class CreatePatientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateConfigurationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Configurations', function (Blueprint $table) {
+        Schema::create('Patients', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('categorie');
-            $table->string('type');
-            $table->string('label');
             $table->timestamps();
         });
     }
@@ -29,8 +26,6 @@ class CreateConfigurationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Configurations');
+        Schema::dropIfExists('Patients');
     }
-
-
 }

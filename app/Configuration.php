@@ -29,4 +29,12 @@ class Configuration extends Model
     public function specialites(){
         return $this->hasMany('App\Medecin', 'id');
     }
+
+    public function noms(){
+        return $this->hasMany(Medicament::class, 'id');
+    }
+
+    public function types(){
+        return $this->hasMany(Medicament::class, 'id');
+    }
 }

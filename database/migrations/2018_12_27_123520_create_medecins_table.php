@@ -22,7 +22,6 @@ class CreateMedecinsTable extends Migration
             $table->integer('specialite_id')->unsigned()->nullable();
             $table->foreign('specialite_id')->references('id')->on('configurations')->onDelete('set null');
             $table->timestamps();
-
         });
     }
 
