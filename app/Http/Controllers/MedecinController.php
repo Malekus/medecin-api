@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Configuration;
 use App\Http\Requests\StoreMedecinRequest;
 use App\Medecin;
 use Illuminate\Http\Request;
@@ -20,8 +21,6 @@ class MedecinController extends Controller
     {
 
         $medecin = Medecin::findOrfail($id);
-
-        dd($medecin);
         return new MedecinResource($medecin);
     }
 
@@ -39,6 +38,8 @@ class MedecinController extends Controller
         $medecin = $request->isMethod('put') ? Medecin::findOrFail($request->id) : new Medecin;
         $medecin->nom = $request->input('nom');
         $medecin->prenom = $request->input('prenom');
+        $medecin->diplome()->associate($request->input('diplome')) ;
+        $medecin->specialite()->associate($request->input('specialite'));
 
         if ($medecin->save()) {
             return new MedecinResource($medecin);

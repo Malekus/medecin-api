@@ -21,13 +21,18 @@ class CreateConfigurationsTable extends Migration
             $table->timestamps();
         });
 
+        /*
         Schema::table('medecins', function (Blueprint $table) {
-            $table->integer('diplome')->unsigned()->index();
+            $table->integer('diplome_id')->unsigned()->index()->nullable();
         });
 
+
         Schema::table('medecins', function (Blueprint $table) {
-            $table->integer('specialite')->unsigned()->index();
+            $table->integer('specialite_id')->unsigned()->index()->nullable();
         });
+        */
+
+
     }
 
     /**

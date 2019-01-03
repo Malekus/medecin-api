@@ -7,7 +7,7 @@ $factory->define(\App\Medecin::class, function (Faker $faker) {
     return [
         'nom' => $faker->name,
         'prenom' => $faker->firstName,
-        'diplome' => $faker->randomElement(\App\Configuration::where(['categorie' => 'Médecin', 'type' => 'Diplôme'])->pluck('id')),
-        'specialite' => $faker->randomElement(\App\Configuration::where(['categorie' => 'Médecin', 'type' => 'Spécialité'])->pluck('id')),
+        'diplome_id' => \App\Configuration::where(['categorie' => 'Médecin', 'type' => 'Diplôme'])->get()->random()->id,
+        'specialite_id' => \App\Configuration::where(['categorie' => 'Médecin', 'type' => 'Spécialité'])->get()->random()->id,
     ];
 });

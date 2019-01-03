@@ -18,6 +18,8 @@ class Medecin extends JsonResource
             'id' => $this->id,
             'nom' => $this->nom,
             'prenom' => $this->prenom,
+            'diplome' => $this->diplome->label ?? '',
+            'specialite' => $this->specialite->label ?? '',
         ];
     }
 }

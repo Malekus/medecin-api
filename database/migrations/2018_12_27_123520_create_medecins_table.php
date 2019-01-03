@@ -17,7 +17,12 @@ class CreateMedecinsTable extends Migration
             $table->increments('id');
             $table->string('nom');
             $table->string('prenom');
+            $table->integer('diplome_id')->unsigned()->nullable();
+            $table->foreign('diplome_id')->references('id')->on('configurations')->onDelete('set null');
+            $table->integer('specialite_id')->unsigned()->nullable();
+            $table->foreign('specialite_id')->references('id')->on('configurations')->onDelete('set null');
             $table->timestamps();
+
         });
     }
 
