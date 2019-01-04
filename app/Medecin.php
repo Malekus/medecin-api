@@ -8,10 +8,14 @@ class Medecin extends Model
 {
 
     public function diplome(){
-        return $this->belongsTo('App\Configuration');
+        return $this->belongsTo(Configuration::class);
     }
 
     public function specialite(){
-        return $this->belongsTo('App\Configuration');
+        return $this->belongsTo(Configuration::class);
+    }
+
+    public function consultations(){
+        return $this->hasMany(Consultation::class, 'id');
     }
 }

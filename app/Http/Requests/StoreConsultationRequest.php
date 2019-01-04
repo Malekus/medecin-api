@@ -2,29 +2,44 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Validation\ValidationException;
 
 class StoreConsultationRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
+    public function wantsJson()
     {
-        return false;
+        return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
+    public function authorize()
+    {
+        return true;
+    }
+
     public function rules()
     {
         return [
-            //
+            'medecin' => 'required',
+            'patient' => 'required',
         ];
+    }
+
+    public function messages()
+    {
+        return [
+            'medecin.required' => 'Le champ médecin est obligatoire.',
+            'patient.required' => 'Le champ patient est obligatoire.',
+        ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = (new ValidationException($validator))->errors();
+        throw new HttpResponseException(response()->json(['errors' => $errors
+        ], JsonResponse::HTTP_UNPROCESSABLE_ENTITY));
     }
 }

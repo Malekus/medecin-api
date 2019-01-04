@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use App\Configuration;
 use App\Http\Requests\StoreConfigurationRequest;
-use Illuminate\Http\Request;
 use App\Http\Resources\Configuration as ConfigurationResource;
 
 class ConfigurationController extends Controller

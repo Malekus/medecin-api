@@ -60,3 +60,14 @@ Route::put('patient/{id}','PatientController@store')
     ->name('store');
 Route::delete('patient/{id}','PatientController@destroy')
     ->name('destroy');
+
+Route::get('consultations','ConsultationController@index')
+    ->name('index');
+Route::get('consultation/{id}','ConsultationController@show')
+    ->name('show');
+Route::post('consultation','ConsultationController@store')
+    ->name('store');
+Route::put('consultation/{id}','ConsultationController@store')
+    ->name('store');
+Route::delete('consultation/{id}','ConsultationController@destroy')
+    ->name('destroy');

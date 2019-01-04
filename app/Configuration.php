@@ -14,7 +14,6 @@ class Configuration extends Model
         parent::boot();
 
         self::creating(function ($model) {
-
             foreach ($model->attributes as $key => $attribute) {
                 $model->$key = ucfirst(mb_strtolower($attribute, 'UTF-8'));
             }
@@ -23,11 +22,11 @@ class Configuration extends Model
     }
 
     public function diplomes(){
-        return $this->hasMany('App\Medecin', 'id');
+        return $this->hasMany(Medecin::class, 'id');
     }
 
     public function specialites(){
-        return $this->hasMany('App\Medecin', 'id');
+        return $this->hasMany(Medecin::class, 'id');
     }
 
     public function noms(){
