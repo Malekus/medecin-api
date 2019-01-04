@@ -15,10 +15,10 @@ class CreateMedicamentsTable extends Migration
     {
         Schema::create('Medicaments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nom_id')->unsigned();
+            $table->integer('nom_id')->unsigned()->index();
             $table->foreign('nom_id')->references('id')->on('configurations')->onDelete('cascade');
-            $table->integer('type_id')->unsigned();
-            $table->foreign('type_id')->references('id')->on('configurations')->onDelete('cascade');
+            $table->integer('type_id')->unsigned()->nullable()->index();
+            $table->foreign('type_id')->references('id')->on('configurations')->onDelete('set null');
             $table->unique(['nom_id', 'type_id']);
             $table->timestamps();
         });

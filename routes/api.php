@@ -49,3 +49,14 @@ Route::put('medicament/{id}','MedicamentController@store')
     ->name('store');
 Route::delete('medicament/{id}','MedicamentController@destroy')
     ->name('destroy');
+
+Route::get('patients','PatientController@index')
+    ->name('index');
+Route::get('patient/{id}','PatientController@show')
+    ->name('show');
+Route::post('patient','PatientController@store')
+    ->name('store');
+Route::put('patient/{id}','PatientController@store')
+    ->name('store');
+Route::delete('patient/{id}','PatientController@destroy')
+    ->name('destroy');

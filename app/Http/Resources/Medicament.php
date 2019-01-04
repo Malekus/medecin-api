@@ -17,7 +17,7 @@ class Medicament extends JsonResource
         return [
             'id' => $this->id,
             'nom' => $this->nom->label,
-            'type' => $this->type->label,
+            'type' => $this->type->label ?? '',
         ];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreMedecinRequest;
+use App\Http\Requests\StoreMedicamentRequest;
 use App\Http\Resources\Medecin as MedecinResource;
 use App\Medecin;
 
@@ -24,18 +24,17 @@ class MedecinController extends Controller
     public function destroy($id)
     {
         $medecin = Medecin::findOrFail($id);
-
         if ($medecin->delete()) {
             return new MedecinResource($medecin);
         }
     }
 
-    public function store(StoreMedecinRequest $request)
+    public function store(StoreMedicamentRequest $request)
     {
         $medecin = $request->isMethod('put') ? Medecin::findOrFail($request->id) : new Medecin;
         $medecin->nom = $request->input('nom');
         $medecin->prenom = $request->input('prenom');
-        $medecin->diplome()->associate($request->input('diplome')) ;
+        $medecin->diplome()->associate($request->input('diplome'));
         $medecin->specialite()->associate($request->input('specialite'));
 
         if ($medecin->save()) {
