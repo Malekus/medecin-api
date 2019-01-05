@@ -17,8 +17,21 @@ class Patient extends Model
     }
 
     public function medicaments(){
-        return $this->hasMany(Medicament::class, 'patient_id');
+        return $this->hasManyThrough(
+            ConsultationMedicament::class,
+            Consultation::class,
+            'patient_id',
+            'consultation_id',
+            'id',
+            'id');
     }
-
-
 }
+
+/*
+ * 'App\Post',
+            'App\User',
+            'country_id', // Foreign key on users table...
+            'user_id', // Foreign key on posts table...
+            'id', // Local key on countries table...
+            'id'
+ */
