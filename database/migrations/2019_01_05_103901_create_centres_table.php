@@ -15,8 +15,13 @@ class CreateCentresTable extends Migration
     {
         Schema::create('Centres', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nom');
+            $table->string('type');
+            $table->string('adresse');
             $table->timestamps();
         });
+
+
     }
 
     /**

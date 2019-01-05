@@ -263,5 +263,13 @@ class ConfigurationsTableSeeder extends Seeder
         App\Configuration::create(['categorie' => 'Médicament', 'type' => 'TOPALGIC', 'label' =>'Antalgiques']);
         App\Configuration::create(['categorie' => 'Médicament', 'type' => 'NASONEX', 'label' =>'Oto-rhino-laryngologie']);
         App\Configuration::create(['categorie' => 'Médicament', 'type' => 'COAPROVEL', 'label' =>'Cardiologie et angéiologie']);
+
+        #Centre Médicaux
+        App\Configuration::create(['categorie' => 'Centre', 'type' => 'Type', 'label' =>'Centre de dialyse']);
+        App\Configuration::create(['categorie' => 'Centre', 'type' => 'Type', 'label' =>'Centre dentaire']);
+        App\Configuration::create(['categorie' => 'Centre', 'type' => 'Type', 'label' =>'Centre de radiologie']);
+        App\Configuration::create(['categorie' => 'Centre', 'type' => 'Type', 'label' =>'Centre de soins de suite et de réadaptation']);
+        App\Configuration::create(['categorie' => 'Centre', 'type' => 'Type', 'label' =>'Centre de santé']);
+
     }
 }
