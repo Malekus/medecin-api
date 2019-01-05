@@ -71,3 +71,14 @@ Route::put('consultation/{id}','ConsultationController@store')
     ->name('store');
 Route::delete('consultation/{id}','ConsultationController@destroy')
     ->name('destroy');
+
+Route::get('centres','CentreController@index')
+    ->name('index');
+Route::get('centre/{id}','CentreController@show')
+    ->name('show');
+Route::post('centre','CentreController@store')
+    ->name('store');
+Route::put('centre/{id}','CentreController@store')
+    ->name('store');
+Route::delete('centre/{id}','CentreController@destroy')
+    ->name('destroy');

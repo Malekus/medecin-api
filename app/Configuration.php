@@ -33,7 +33,11 @@ class Configuration extends Model
         return $this->hasMany(Medicament::class, 'id');
     }
 
-    public function types(){
+    public function medicamentTypes(){
         return $this->hasMany(Medicament::class, 'id');
+    }
+
+    public function centreTypes(){
+        return $this->hasMany(Centre::class, 'id');
     }
 }

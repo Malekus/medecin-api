@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             PatientsTableSeeder::class,
             ConsultationsTableSeeder::class,
             ConsultationMedicamentTableSeeder::class,
+            CentresTableSeeder::class,
         ]);
     }
 }

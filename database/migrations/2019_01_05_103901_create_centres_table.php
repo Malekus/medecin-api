@@ -16,7 +16,8 @@ class CreateCentresTable extends Migration
         Schema::create('Centres', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom');
-            $table->string('type');
+            $table->integer('type_id')->unsigned()->nullable();
+            $table->foreign('type_id')->references('id')->on('configurations')->onDelete('set null');
             $table->string('adresse');
             $table->timestamps();
         });

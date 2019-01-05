@@ -14,6 +14,11 @@ class Centre extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'nom' => "Centre ".$this->nom,
+            'type' => $this->type->label ?? '',
+            'adresse' => $this->adresse,
+        ];
     }
 }

@@ -36,7 +36,6 @@ class MedecinController extends Controller
         $medecin->prenom = $request->input('prenom');
         $medecin->diplome()->associate($request->input('diplome'));
         $medecin->specialite()->associate($request->input('specialite'));
-        dd($medecin);
         if ($medecin->save()) {
             return new MedecinResource($medecin);
         }
