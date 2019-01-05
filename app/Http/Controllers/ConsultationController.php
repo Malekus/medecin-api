@@ -35,6 +35,7 @@ class ConsultationController extends Controller
         $consultation->medecin()->associate($request->input('medecin'));
         $consultation->patient()->associate($request->input('patient'));
         if ($consultation->save()) {
+            $consultation->medicaments()->sync($request->input('medicaments'));
             return new ConsultationResource($consultation);
         }
         return new ConsultationResource(new Consultation());

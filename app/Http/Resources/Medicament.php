@@ -18,6 +18,7 @@ class Medicament extends JsonResource
             'id' => $this->id,
             'nom' => $this->nom->label,
             'type' => $this->type->label ?? '',
+            'consultations' => $this->consultations,
         ];
     }
 }

@@ -21,6 +21,14 @@ class CreateConsultationsTable extends Migration
             $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
             $table->timestamps();
         });
+
+        Schema::create('consultation_medicament', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('consultation_id')->unsigned()->index();
+            $table->foreign('consultation_id')->references('id')->on('consultations')->onDelete('cascade');
+            $table->integer('medicament_id')->unsigned()->index();
+            $table->foreign('medicament_id')->references('id')->on('medicaments')->onDelete('cascade');
+        });
     }
 
     /**

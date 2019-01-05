@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Consultation extends Model
 {
+    protected $hidden = ['pivot'];
+
     public function medecin(){
         return $this->belongsTo(Medecin::class);
     }
@@ -13,4 +15,9 @@ class Consultation extends Model
     public function patient(){
         return $this->belongsTo(Patient::class);
     }
+
+    public function medicaments(){
+        return $this->belongsToMany(Medicament::class)->select(['consultation_medicament.id', 'nom_id', 'type_id', 'medicament_id']);
+    }
+
 }
