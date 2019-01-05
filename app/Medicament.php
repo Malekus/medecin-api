@@ -17,6 +17,6 @@ class Medicament extends Model
     }
 
     public function consultations(){
-        return $this->belongsToMany(Consultation::class)->select(['consultation_medicament.id', 'medecin_id', 'patient_id', 'consultation_id']);
+        return $this->belongsToMany(Consultation::class);//->select(['consultation_medicament.id', 'medecin_id', 'patient_id', 'consultation_id']);
     }
 }

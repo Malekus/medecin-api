@@ -18,4 +18,8 @@ class Medecin extends Model
     public function consultations(){
         return $this->hasMany(Consultation::class, 'id');
     }
+
+    public function centre(){
+        return $this->belongsTo(Centre::class);
+    }
 }

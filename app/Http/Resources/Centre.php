@@ -19,6 +19,7 @@ class Centre extends JsonResource
             'nom' => "Centre ".$this->nom,
             'type' => $this->type->label ?? '',
             'adresse' => $this->adresse,
+            'patient' => $this->patients,
         ];
     }
 }

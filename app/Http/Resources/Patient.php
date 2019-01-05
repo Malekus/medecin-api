@@ -21,7 +21,9 @@ class Patient extends JsonResource
             'numsecu' => $this->numsecu,
             'adresse' => $this->adresse,
             'tel' => $this->tel,
-            //'consultations' => $this->consultations
+            'consultations' => $this->consultations,
+            'medicaments' => $this->medicaments,
+            'centres' => $this->centres,
         ];
     }
 }
