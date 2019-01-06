@@ -163,7 +163,7 @@ class ConfigurationsTableSeeder extends Seeder
         App\Configuration::create(['categorie' => 'Médicament', 'type' => 'Type', 'label' => 'Ophtalmologie']);
         App\Configuration::create(['categorie' => 'Médicament', 'type' => 'Type', 'label' => 'Cancérologie et hématologie']);
 
-        #test
+        #test.sh
         App\Configuration::create(['categorie' => 'Médicament', 'type' => 'DOLIPRANE', 'label' =>'Antalgiques']);
         App\Configuration::create(['categorie' => 'Médicament', 'type' => 'EFFERALGAN', 'label' =>'Antalgiques']);
         App\Configuration::create(['categorie' => 'Médicament', 'type' => 'DAFALGAN', 'label' =>'Antalgiques']);

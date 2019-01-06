@@ -24,8 +24,8 @@ class StoreConfigurationRequest extends FormRequest
     {
         return [
             'categorie' => 'required|max:20|alpha',
-            'type' => 'required|max:20',
-            'label' => 'required|max:20',
+            'type' => 'required|max:20|alpha',
+            'label' => 'required|max:20|alpha',
         ];
     }
 

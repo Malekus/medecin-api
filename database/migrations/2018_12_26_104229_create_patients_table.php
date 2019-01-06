@@ -17,9 +17,9 @@ class CreatePatientsTable extends Migration
             $table->increments('id');
             $table->string('nom');
             $table->string('prenom');
-            $table->string('numsecu');
-            $table->string('adresse');
-            $table->string('tel');
+            $table->string('numsecu')->nullable();
+            $table->string('adresse')->nullable();
+            $table->string('tel')->nullable();
             $table->timestamps();
         });
     }

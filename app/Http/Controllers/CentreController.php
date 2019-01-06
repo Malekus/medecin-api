@@ -32,7 +32,8 @@ class CentreController extends Controller
     {
         $centre = $request->isMethod('put') ? Centre::findOrFail($request->id) : new Centre;
         $centre->nom = $request->input('nom');
-        $centre->prenom = $request->input('prenom');
+        $centre->type()->associate($request->input('type'));
+        $centre->adresse = $request->input('adresse');
 
         if ($centre->save()) {
             return new CentreResource($centre);

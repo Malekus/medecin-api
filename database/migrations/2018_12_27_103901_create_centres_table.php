@@ -18,7 +18,7 @@ class CreateCentresTable extends Migration
             $table->string('nom');
             $table->integer('type_id')->unsigned()->nullable();
             $table->foreign('type_id')->references('id')->on('configurations')->onDelete('set null');
-            $table->string('adresse');
+            $table->string('adresse')->nullable();
             $table->timestamps();
         });
 
