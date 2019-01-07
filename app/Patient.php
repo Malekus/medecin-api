@@ -8,15 +8,18 @@ class Patient extends Model
 {
     protected $hidden = ['pivot'];
 
-    public function consultations(){
+    public function consultations()
+    {
         return $this->hasMany(Consultation::class, 'patient_id');//->select(['id', 'medecin_id']);
     }
 
-    public function centres(){
+    public function centres()
+    {
         return $this->belongsToMany(Centre::class)->select(['centre_patient.id', 'nom', 'type_id', 'adresse']);
     }
 
-    public function medicaments(){
+    public function medicaments()
+    {
         return $this->hasManyThrough(
             ConsultationMedicament::class,
             Consultation::class,
@@ -26,12 +29,3 @@ class Patient extends Model
             'id');
     }
 }
-
-/*
- * 'App\Post',
-            'App\User',
-            'country_id', // Foreign key on users table...
-            'user_id', // Foreign key on posts table...
-            'id', // Local key on countries table...
-            'id'
- */

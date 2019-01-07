@@ -39,10 +39,8 @@ class StorePatientRequest extends FormRequest
             'numsecu.required' => 'Le champ numéro de sécurité sociale est obligatoire.',
             'adresse.required' => 'Le champ adresse est obligatoire.',
             'tel.required' => 'Le champ téléphone est obligatoire.',
-
             'nom.alpha' => 'Le nom ne peut contenir que des lettres.',
             'prenom.alpha' => 'Le prenom ne peut contenir que des lettres.',
-
             'numsecu.max' => 'Le numéro de sécurité sociale ne peut pas dépasser 20 caractères.',
 
         ];

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Centre;
 use App\Http\Requests\StoreCentreRequest;
 use App\Http\Resources\Centre as CentreResource;
-use App\Centre;
 
 class CentreController extends Controller
 {

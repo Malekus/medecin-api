@@ -9,6 +9,4 @@ class CentrePatient extends Model
     protected $table = 'centre_patient';
 
     public $timestamps = false;
-
-
 }

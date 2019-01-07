@@ -17,68 +17,68 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('configurations','ConfigurationController@index')
+Route::get('configurations', 'ConfigurationController@index')
     ->name('index');
-Route::get('configuration/{id}','ConfigurationController@show')
+Route::get('configuration/{id}', 'ConfigurationController@show')
     ->name('show');
-Route::post('configuration','ConfigurationController@store')
+Route::post('configuration', 'ConfigurationController@store')
     ->name('store');
-Route::put('configuration/{id}','ConfigurationController@store')
+Route::put('configuration/{id}', 'ConfigurationController@store')
     ->name('store');
-Route::delete('configuration/{id}','ConfigurationController@destroy')
+Route::delete('configuration/{id}', 'ConfigurationController@destroy')
     ->name('destroy');
 
-Route::get('medecins','MedecinController@index')
+Route::get('medecins', 'MedecinController@index')
     ->name('index');
-Route::get('medecin/{id}','MedecinController@show')
+Route::get('medecin/{id}', 'MedecinController@show')
     ->name('show');
-Route::post('medecin','MedecinController@store')
+Route::post('medecin', 'MedecinController@store')
     ->name('store');
-Route::put('medecin/{id}','MedecinController@store')
+Route::put('medecin/{id}', 'MedecinController@store')
     ->name('store');
-Route::delete('medecin/{id}','MedecinController@destroy')
+Route::delete('medecin/{id}', 'MedecinController@destroy')
     ->name('destroy');
 
-Route::get('medicaments','MedicamentController@index')
+Route::get('medicaments', 'MedicamentController@index')
     ->name('index');
-Route::get('medicament/{id}','MedicamentController@show')
+Route::get('medicament/{id}', 'MedicamentController@show')
     ->name('show');
-Route::post('medicament','MedicamentController@store')
+Route::post('medicament', 'MedicamentController@store')
     ->name('store');
-Route::put('medicament/{id}','MedicamentController@store')
+Route::put('medicament/{id}', 'MedicamentController@store')
     ->name('store');
-Route::delete('medicament/{id}','MedicamentController@destroy')
+Route::delete('medicament/{id}', 'MedicamentController@destroy')
     ->name('destroy');
 
-Route::get('patients','PatientController@index')
+Route::get('patients', 'PatientController@index')
     ->name('index');
-Route::get('patient/{id}','PatientController@show')
+Route::get('patient/{id}', 'PatientController@show')
     ->name('show');
-Route::post('patient','PatientController@store')
+Route::post('patient', 'PatientController@store')
     ->name('store');
-Route::put('patient/{id}','PatientController@store')
+Route::put('patient/{id}', 'PatientController@store')
     ->name('store');
-Route::delete('patient/{id}','PatientController@destroy')
+Route::delete('patient/{id}', 'PatientController@destroy')
     ->name('destroy');
 
-Route::get('consultations','ConsultationController@index')
+Route::get('consultations', 'ConsultationController@index')
     ->name('index');
-Route::get('consultation/{id}','ConsultationController@show')
+Route::get('consultation/{id}', 'ConsultationController@show')
     ->name('show');
-Route::post('consultation','ConsultationController@store')
+Route::post('consultation', 'ConsultationController@store')
     ->name('store');
-Route::put('consultation/{id}','ConsultationController@store')
+Route::put('consultation/{id}', 'ConsultationController@store')
     ->name('store');
-Route::delete('consultation/{id}','ConsultationController@destroy')
+Route::delete('consultation/{id}', 'ConsultationController@destroy')
     ->name('destroy');
 
-Route::get('centres','CentreController@index')
+Route::get('centres', 'CentreController@index')
     ->name('index');
-Route::get('centre/{id}','CentreController@show')
+Route::get('centre/{id}', 'CentreController@show')
     ->name('show');
-Route::post('centre','CentreController@store')
+Route::post('centre', 'CentreController@store')
     ->name('store');
-Route::put('centre/{id}','CentreController@store')
+Route::put('centre/{id}', 'CentreController@store')
     ->name('store');
-Route::delete('centre/{id}','CentreController@destroy')
+Route::delete('centre/{id}', 'CentreController@destroy')
     ->name('destroy');

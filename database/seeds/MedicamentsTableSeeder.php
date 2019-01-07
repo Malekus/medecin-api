@@ -4,11 +4,6 @@ use Illuminate\Database\Seeder;
 
 class MedicamentsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         factory(\App\Medicament::class)->create(['nom_id' => 28, 'type_id' => 127]);

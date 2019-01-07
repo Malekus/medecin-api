@@ -21,23 +21,28 @@ class Configuration extends Model
 
     }
 
-    public function diplomes(){
+    public function diplomes()
+    {
         return $this->hasMany(Medecin::class, 'id');
     }
 
-    public function specialites(){
+    public function specialites()
+    {
         return $this->hasMany(Medecin::class, 'id');
     }
 
-    public function noms(){
+    public function noms()
+    {
         return $this->hasMany(Medicament::class, 'id');
     }
 
-    public function medicamentTypes(){
+    public function medicamentTypes()
+    {
         return $this->hasMany(Medicament::class, 'id');
     }
 
-    public function centreTypes(){
+    public function centreTypes()
+    {
         return $this->hasMany(Centre::class, 'id');
     }
 }

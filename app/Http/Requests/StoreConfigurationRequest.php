@@ -41,7 +41,6 @@ class StoreConfigurationRequest extends FormRequest
             'categorie.alpha' => 'La catégorie ne peut contenir que des lettres.',
             'type.alpha' => 'Le type ne peut contenir que des lettres.',
             'label.alpha' => 'Le label ne peut contenir que des lettres.'
-
         ];
     }
 

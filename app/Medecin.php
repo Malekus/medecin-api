@@ -7,19 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 class Medecin extends Model
 {
 
-    public function diplome(){
+    public function diplome()
+    {
         return $this->belongsTo(Configuration::class);
     }
 
-    public function specialite(){
+    public function specialite()
+    {
         return $this->belongsTo(Configuration::class);
     }
 
-    public function consultations(){
+    public function consultations()
+    {
         return $this->hasMany(Consultation::class, 'id');
     }
 
-    public function centre(){
+    public function centre()
+    {
         return $this->belongsTo(Centre::class);
     }
 }

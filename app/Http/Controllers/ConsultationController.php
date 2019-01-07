@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Consultation;
 use App\Http\Requests\StoreConsultationRequest;
 use App\Http\Resources\Consultation as ConsultationResource;
-use App\Consultation;
 
 class ConsultationController extends Controller
 {

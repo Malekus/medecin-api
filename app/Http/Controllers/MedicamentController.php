@@ -8,11 +8,6 @@ use App\Medicament;
 
 class MedicamentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $medicaments = Medicament::paginate(15);
@@ -37,7 +32,7 @@ class MedicamentController extends Controller
     public function store(StoreMedicamentRequest $request)
     {
         $medicament = $request->isMethod('put') ? Medicament::findOrFail($request->id) : new Medicament;
-        $medicament->nom()->associate($request->input('nom')) ;
+        $medicament->nom()->associate($request->input('nom'));
         $medicament->type()->associate($request->input('type'));
 
         if ($medicament->save()) {
