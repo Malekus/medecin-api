@@ -82,3 +82,11 @@ Route::put('centre/{id}', 'CentreController@store')
     ->name('store');
 Route::delete('centre/{id}', 'CentreController@destroy')
     ->name('destroy');
+
+Route::get('form/centres', 'FormController@getCentres');
+Route::get('form/patients', 'FormController@getPatients');
+Route::get('form/medecins', 'FormController@getMedecins');
+Route::get('form/medicaments', 'FormController@getMedicaments');
+Route::get('form/diplomes', 'FormController@getDiplomes');
+Route::get('form/specialites', 'FormController@getSpecialites');
+Route::get('form/types', 'FormController@getTypes');

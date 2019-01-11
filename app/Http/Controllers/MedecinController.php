@@ -42,4 +42,5 @@ class MedecinController extends Controller
     }
 
 
+    
 }
