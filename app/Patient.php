@@ -10,12 +10,16 @@ class Patient extends Model
 
     public function consultations()
     {
-        return $this->hasMany(Consultation::class, 'patient_id');//->select(['id', 'medecin_id']);
+        return $this->hasMany(Consultation::class, 'patient_id')
+            ->join('medecins', 'medecins.id', '=', 'consultations.medecin_id') // 'medecins.nom, medecins.prenom'
+            ->join('configurations', 'configurations.id', '=', 'consultations.type_id')
+            ->select(['configurations.*', 'medecins.*']);
     }
 
     public function centres()
     {
-        return $this->belongsToMany(Centre::class)->select(['centre_patient.id', 'nom', 'type_id', 'adresse']);
+        return $this->belongsToMany(Centre::class)->join('configurations', 'configurations.id', '=','centres.type_id')
+            ->select(['centre_patient.id', 'nom', 'configurations.label', 'adresse', 'centre_patient.centre_id as centre_id']);
     }
 
     public function medicaments()
@@ -26,6 +30,12 @@ class Patient extends Model
             'patient_id',
             'consultation_id',
             'id',
-            'id');
+            'id')
+            ->join('medicaments', 'medicaments.id', '=', 'consultation_medicament.medicament_id')
+            ->join('configurations', function($join){
+                $join->on('medicaments.nom_id', '=', 'configurations.id')
+                    ->orOn('medicaments.type_id', '=', 'configurations.id');
+            })
+            ->select(['configurations.*']);
     }
 }

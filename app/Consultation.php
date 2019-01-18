@@ -20,4 +20,8 @@ class Consultation extends Model
         return $this->belongsToMany(Medicament::class)->select(['consultation_medicament.id', 'nom_id', 'type_id', 'medicament_id']);
     }
 
+    public function type(){
+        return $this->belongsTo(Configuration::class);
+    }
+
 }

@@ -13,6 +13,7 @@ class Consultation extends JsonResource
             'medecin' => $this->medecin,
             'patient' => $this->patient,
             'medicaments' => $this->medicaments,
+            'type' => $this->type,
         ];
     }
 }

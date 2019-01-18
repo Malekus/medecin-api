@@ -19,7 +19,7 @@ class Medecin extends Model
 
     public function consultations()
     {
-        return $this->hasMany(Consultation::class, 'id');
+        return $this->hasMany(Consultation::class, 'medecin_id');
     }
 
     public function centre()

@@ -271,5 +271,23 @@ class ConfigurationsTableSeeder extends Seeder
         App\Configuration::create(['categorie' => 'Centre', 'type' => 'Type', 'label' => 'Centre de soins de suite et de réadaptation']);
         App\Configuration::create(['categorie' => 'Centre', 'type' => 'Type', 'label' => 'Centre de santé']);
 
+        # Consultation type
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Consultation dentaire']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Première consultation d\'implantologie']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Consultation de suivi d\'implantologie']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Première consultation dentaire']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Urgence dentaire']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Devis pour prothèse - Implant']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Détartrage']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Certificat médical']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Vaccination']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Consultation de pédiatrie']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Consultation de gynécologie médicale']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Consultation de médecine du sport']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Consultation d\'homéopathie']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Consultation d\'acupuncture']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Bilan psychologique']);
+        App\Configuration::create(['categorie' => 'Consultation', 'type' => 'Type', 'label' => 'Consultation d\'hypnose']);
+
     }
 }

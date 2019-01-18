@@ -61,4 +61,17 @@ class FormController extends Controller
         $types = Configuration::where('categorie', 'Médicament')->where('type', 'Type')->get()->pluck('label', 'id');
         return $types;
     }
+
+    public function getCentreTypes()
+    {
+        $types = Configuration::where('categorie', 'Centre')->where('type', 'Type')->get()->pluck('label', 'id');
+        return $types;
+    }
+
+    public function getConsultationTypes()
+    {
+        $types = Configuration::where('categorie', 'Consultation')->where('type', 'Type')->get()->pluck('label', 'id');
+        return $types;
+    }
+
 }

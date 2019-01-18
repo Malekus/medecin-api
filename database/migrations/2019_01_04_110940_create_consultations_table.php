@@ -14,6 +14,8 @@ class CreateConsultationsTable extends Migration
             $table->foreign('medecin_id')->references('id')->on('medecins')->onDelete('cascade');
             $table->integer('patient_id')->unsigned()->index();
             $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
+            $table->integer('type_id')->unsigned()->index();
+            $table->foreign('type_id')->references('id')->on('configurations')->onDelete('cascade');
             $table->timestamps();
         });
 

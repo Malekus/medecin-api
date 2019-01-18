@@ -18,6 +18,8 @@ class Patient extends JsonResource
             'consultations' => $this->consultations,
             'medicaments' => $this->medicaments,
             'centres' => $this->centres,
+            'cree' => $this->created_at,
+            'maj' => $this->updated_at,
         ];
     }
 }

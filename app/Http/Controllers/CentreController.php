@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Centre;
 use App\Http\Requests\StoreCentreRequest;
 use App\Http\Resources\Centre as CentreResource;
+use Illuminate\Http\Request;
 
 class CentreController extends Controller
 {
@@ -39,4 +40,24 @@ class CentreController extends Controller
             return new CentreResource($centre);
         }
     }
+
+    public function addPatient(Request $request)
+    {
+        $centre = Centre::findOrFail($request->get('id'));
+        $centre->patients()->sync($request->get('patient'), false);
+        if ($centre->save()) {
+            return new CentreResource($centre);
+        }
+        return  new CentreResource($centre);
+    }
+
+    public function removePatient(Request $request)
+    {
+        $centre = Centre::findOrFail($request->get('id'));
+        $centre->patients()->detach($request->get('patient'));
+        if ($centre->save()) {
+            return new CentreResource($centre);
+        }
+    }
+
 }

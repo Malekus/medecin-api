@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePatientRequest;
 use App\Http\Resources\Patient as PatientResource;
 use App\Patient;
+use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $patients = Patient::paginate(15);
+        if($request->get('search') == null){
+            $patients = Patient::paginate(15);
+            return PatientResource::collection($patients);
+        }
+        $patients = Patient::where('nom', 'like', '%'.$request->get('search').'%')->paginate(15);
         return PatientResource::collection($patients);
     }
 

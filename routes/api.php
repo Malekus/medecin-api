@@ -71,6 +71,10 @@ Route::put('consultation/{id}', 'ConsultationController@store')
     ->name('store');
 Route::delete('consultation/{id}', 'ConsultationController@destroy')
     ->name('destroy');
+Route::post('consultation/addMedicament', 'ConsultationController@addMedicament')
+    ->name('addMedicament');
+Route::post('consultation/removeMedicament', 'ConsultationController@removeMedicament')
+    ->name('removeMedicament');
 
 Route::get('centres', 'CentreController@index')
     ->name('index');
@@ -82,6 +86,10 @@ Route::put('centre/{id}', 'CentreController@store')
     ->name('store');
 Route::delete('centre/{id}', 'CentreController@destroy')
     ->name('destroy');
+Route::post('centre/addPatient', 'CentreController@addPatient')
+    ->name('addPatient');
+Route::post('centre/removePatient', 'CentreController@removePatient')
+    ->name('removePatient');
 
 Route::get('form/centres', 'FormController@getCentres');
 Route::get('form/patients', 'FormController@getPatients');
@@ -90,3 +98,5 @@ Route::get('form/medicaments', 'FormController@getMedicaments');
 Route::get('form/diplomes', 'FormController@getDiplomes');
 Route::get('form/specialites', 'FormController@getSpecialites');
 Route::get('form/types', 'FormController@getTypes');
+Route::get('form/centreTypes', 'FormController@getCentreTypes');
+Route::get('form/consultationTypes', 'FormController@getConsultationTypes');

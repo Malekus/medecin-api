@@ -11,7 +11,7 @@ class MedecinController extends Controller
 
     public function index()
     {
-        $medecins = Medecin::paginate(15);
+        $medecins = Medecin::orderBy('updated_at', 'desc')->paginate(15);
         return MedecinResource::collection($medecins);
     }
 
