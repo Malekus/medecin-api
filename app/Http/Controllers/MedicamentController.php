@@ -5,12 +5,19 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreMedicamentRequest;
 use App\Http\Resources\Medicament as MedicamentResource;
 use App\Medicament;
+use Illuminate\Http\Request;
 
 class MedicamentController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $medicaments = Medicament::paginate(15);
+        if ($request->get('search') == null) {
+            $medicaments = Medicament::all();
+            return MedicamentResource::collection($medicaments);
+        }
+
+        $medicaments = Medicament::where('nom_id', 'like', '%' . $request->get('search') . '%')
+            ->orWhere('type_id', 'like', '%' . $request->get('search') . '%')->get();
         return MedicamentResource::collection($medicaments);
     }
 

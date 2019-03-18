@@ -10,9 +10,13 @@ use Illuminate\Http\Request;
 
 class ConsultationController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $consultations = Consultation::paginate(15);
+        if ($request->get('search') == null) {
+            $consultations = Consultation::all();
+            return ConsultationResource::collection($consultations);
+        }
+        $consultations = Consultation::all();
         return ConsultationResource::collection($consultations);
     }
 
@@ -46,7 +50,7 @@ class ConsultationController extends Controller
 
     public function addMedicament(Request $request)
     {
-        ConsultationMedicament::create(['consultation_id' => $request->get('consultation'), 'medicament_id' => $request->get('medicament')]);
+        ConsultationMedicament::create(['consultation_id' => $request->get('consultation'), 'medicament_id' => $request->get('medicament')])->save();
         $consultation = Consultation::findOrFail($request->get('consultation'));
         if ($consultation->save()) {
             return new ConsultationResource($consultation);

@@ -12,11 +12,11 @@ class PatientController extends Controller
 
     public function index(Request $request)
     {
-        if($request->get('search') == null){
-            $patients = Patient::paginate(15);
+        if ($request->get('search') == null) {
+            $patients = Patient::all();
             return PatientResource::collection($patients);
         }
-        $patients = Patient::where('nom', 'like', '%'.$request->get('search').'%')->paginate(15);
+        $patients = Patient::where('nom', 'like', '%' . $request->get('search') . '%');
         return PatientResource::collection($patients);
     }
 

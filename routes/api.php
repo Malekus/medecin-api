@@ -100,3 +100,6 @@ Route::get('form/specialites', 'FormController@getSpecialites');
 Route::get('form/types', 'FormController@getTypes');
 Route::get('form/centreTypes', 'FormController@getCentreTypes');
 Route::get('form/consultationTypes', 'FormController@getConsultationTypes');
+
+Route::get('statistique', 'StatistiqueController@index')
+    ->name('index');

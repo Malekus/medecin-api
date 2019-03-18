@@ -5,13 +5,19 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreMedecinRequest;
 use App\Http\Resources\Medecin as MedecinResource;
 use App\Medecin;
+use Illuminate\Http\Request;
 
 class MedecinController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $medecins = Medecin::orderBy('updated_at', 'desc')->paginate(15);
+
+        if ($request->get('search') == null) {
+            $medecins = Medecin::orderBy('updated_at', 'desc')->get();
+            return MedecinResource::collection($medecins);
+        }
+        $medecins = Medecin::where('nom', 'like', '%' . $request->get('search') . '%')->get();
         return MedecinResource::collection($medecins);
     }
 
@@ -42,5 +48,4 @@ class MedecinController extends Controller
     }
 
 
-    
 }

@@ -13,7 +13,7 @@ class Patient extends Model
         return $this->hasMany(Consultation::class, 'patient_id')
             ->join('medecins', 'medecins.id', '=', 'consultations.medecin_id') // 'medecins.nom, medecins.prenom'
             ->join('configurations', 'configurations.id', '=', 'consultations.type_id')
-            ->select(['configurations.*', 'medecins.*']);
+            ->select(['configurations.*', 'medecins.*', 'consultations.id as idConsultation']);
     }
 
     public function centres()
@@ -36,6 +36,6 @@ class Patient extends Model
                 $join->on('medicaments.nom_id', '=', 'configurations.id')
                     ->orOn('medicaments.type_id', '=', 'configurations.id');
             })
-            ->select(['configurations.*']);
+            ->select(['configurations.*', 'consultations.id as idConsultation', 'medicaments.id as idMedicament']);
     }
 }

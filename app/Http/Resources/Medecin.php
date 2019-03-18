@@ -16,6 +16,8 @@ class Medecin extends JsonResource
             'specialite' => $this->specialite->label ?? '',
             'centre' => $this->centre,
             'consultations' => $this->consultations,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at
         ];
     }
 }
